@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Ірина",
+    "baseAmount": 100.0,
+    "type": "Роздрібний"
+  },
+  {
+    "name": "Ольга",
+    "baseAmount": 100.0,
+    "type": "Оптовий"
+  },
+  {
+    "partnerDiscount": 50.0,
+    "name": "Мар\u0027яна",
+    "baseAmount": 100.0,
+    "type": "Партнер"
+  }
+]

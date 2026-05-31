@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vacancies.MainController">
+    <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+
+    <TableView fx:id="tableVacancies" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="colCompany" text="Компанія" prefWidth="150"/>
+            <TableColumn fx:id="colPosition" text="Позиція" prefWidth="150"/>
+            <TableColumn fx:id="colLanguage" text="Мова" prefWidth="100"/>
+            <TableColumn fx:id="colRequirements" text="Вимоги" prefWidth="250"/>
+            <TableColumn fx:id="colSalary" text="Зарплата ($)" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <TextField fx:id="txtCompanyAdd" promptText="Компанія"/>
+        <TextField fx:id="txtPositionAdd" promptText="Позиція"/>
+        <TextField fx:id="txtLanguageAdd" promptText="Мова"/>
+        <TextField fx:id="txtRequirementsAdd" promptText="Вимоги"/>
+        <TextField fx:id="txtSalaryAdd" promptText="Зарплата"/>
+        <Button text="Додати" onAction="#addVacancyAction"/>
+    </HBox>
+
+    <Separator/>
+
+    <HBox spacing="10">
+        <Label text="Пошук (Мова + ЗП):"/>
+        <TextField fx:id="txtFilterLang" promptText="Мова"/>
+        <TextField fx:id="txtFilterMinSalary" promptText="Мін. ЗП"/>
+        <TextField fx:id="txtFilterMaxSalary" promptText="Макс. ЗП"/>
+        <Button text="Шукати" onAction="#filterLangSalaryAction"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Пошук за компанією:"/>
+        <TextField fx:id="txtFilterCompany" promptText="Назва компанії"/>
+        <Button text="Шукати компанію" onAction="#filterCompanyAction"/>
+        <Pane HBox.hgrow="ALWAYS" />
+        <Button text="Показати всі" onAction="#showAllAction"/>
+    </HBox>
+</VBox>
